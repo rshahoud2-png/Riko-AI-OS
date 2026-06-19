@@ -1,31 +1,24 @@
-# Source Analysis
+# Adapted Patterns
 
-## Repositories Studied
+This repository uses adapted patterns from public AI agent, Codex, MCP, skill, and memory repositories. It does not copy their files or copyrighted content.
 
-- `hesreallyhim/awesome-claude-code`: Claude Code ecosystem curation, skills, hooks, tools, and emphasis on originality/security.
-- `VoltAgent/awesome-codex-subagents`: Codex-native subagent structure, explicit delegation, model/sandbox fields, and category taxonomy.
-- `Ischca/awesome-agents-md`: AGENTS.md examples and root instruction patterns.
-- `punkpeye/awesome-mcp-servers`: MCP categories and tool selection patterns.
-- `mem0ai/mem0`: memory categories, memory safety gates, retrieval concepts, and durable fact patterns.
-- `upstash/context7`: current documentation retrieval for library/API work.
-- `ComposioHQ/awesome-codex-skills`: skill file shape and practical workflow style.
-- `milisp/awesome-chatgpt-claude-agents`: agent ecosystem categories and multi-agent workflow references.
+## Patterns Kept
 
-## Patterns Adapted
+- `AGENTS.md` as the main Codex control file.
+- Specialist agent files with clear role, use case, process, output, quality, and escalation sections.
+- Skill files as repeatable methods rather than personas.
+- Explicit orchestration instead of assuming automatic agent spawning.
+- Current-docs habits for APIs, Vercel, Supabase, and fast-moving packages.
+- Durable memory gates: future utility, novelty, factuality, and safety.
 
-- Root instruction files for assistant behavior.
-- Specialist role files with clear invocation rules.
-- Skill files as reusable task methods.
-- Explicit multi-agent orchestration instead of implicit spawning.
-- Read-only versus write-capable role separation.
-- Current-docs retrieval for API and platform work.
-- Memory gates for durable, safe facts.
-- MCP profiles grouped by assistant environment.
+## Patterns Removed Or De-Emphasized
 
-## Patterns Intentionally Avoided
+- Claude-first setup in the main root.
+- General-purpose AI assistant positioning.
+- Client/vendor-specific security system agents.
+- Broad MCP cataloging.
+- Large enterprise process overhead.
 
-- Copying full third-party agent or skill files.
-- Installing large toolchains by default.
-- Storing API keys or placeholder secrets.
-- Recommending every MCP server in an awesome list.
-- Overly autonomous workflows without human approval gates.
+## Personal Codex Direction
+
+Riko AI OS should stay small, practical, and personal. Add new agents or skills only when they improve recurring personal Codex work.
