@@ -2,21 +2,25 @@
 
 ## Purpose
 
-Memory exists to help future agents serve the user better. Most interactions should not create memory.
+Memory helps future Codex sessions remember safe, durable personal and project context. Most interactions should not create memory.
 
-## Store Only Durable Facts
+## Store Only Durable Safe Facts
 
 Good candidates:
 
-- User preferences and standing rules.
-- Project names, goals, and durable architecture decisions.
+- Personal workflow preferences.
+- Standing rules for Codex behavior.
+- Active personal project names, goals, and durable decisions.
 - Tooling choices and environment constraints.
-- Long-lived business context.
-- Important relationships or responsibilities.
+- Long-lived business, career, event, or productivity context.
 
 Do not store:
 
+- TWG client data.
+- Work credentials.
 - Secrets, passwords, tokens, keys, webhooks, recovery codes, or private certificates.
+- Medical records.
+- Customer private data.
 - One-time command output.
 - Temporary errors.
 - Sensitive personal details not needed for future work.
@@ -26,10 +30,10 @@ Do not store:
 
 Before storing a memory, ask:
 
-1. Future utility: would a new agent benefit later?
+1. Future utility: would a new Codex session benefit later?
 2. Novelty: is it new or materially changed?
 3. Factuality: is it concrete and actionable?
-4. Safety: does it avoid secrets and sensitive data?
+4. Safety: does it avoid secrets, medical records, customer data, and work credentials?
 
 All four must pass.
 
@@ -42,7 +46,10 @@ All four must pass.
 - `configuration`
 - `technical`
 - `business`
-- `relationship`
+- `career`
+- `finance`
+- `event`
+- `productivity`
 - `decision`
 
 ## Memory Shape
@@ -51,9 +58,9 @@ All four must pass.
 category: project
 importance: 0.75
 source_date: 2026-06-19
-fact: "Riko AI OS is a reusable agent/skill/workflow system for Codex and Claude Code."
+fact: "Riko AI OS is a personal Codex operating system for software, AI apps, automation, research, planning, and productivity."
 ```
 
 ## Review Cadence
 
-Review durable memories monthly or before major project handoff. Delete stale memories when they no longer help.
+Review durable memories monthly or before major project changes. Delete stale or unsafe memories.
