@@ -1,25 +1,37 @@
-# Delegation Prompts
+# Codex Prompt Starters
 
-## Multi-Agent Coding
+## Personal App Build
 
 ```text
-Use the Researcher to verify current docs, the Software Architect to propose the smallest safe design, the Full Stack Developer to implement, and the Code Reviewer to inspect the final diff. Integrate results into one concise handoff.
+Use AGENTS.md. Use the Orchestrator, Software Architect, Full Stack Developer, and Code Reviewer as needed. Build the smallest working version first, validate it, and summarize files changed.
 ```
 
-## Investigation
+## AI App Idea
 
 ```text
-Use the Troubleshooting skill and Researcher agent. Separate symptoms, evidence, hypotheses, tests, and conclusions. Do not change production systems without approval.
+Use the AI App Builder and Researcher. Define the user problem, simplest AI pattern, data flow, privacy risks, MVP scope, and evaluation examples.
 ```
 
-## Documentation
+## GitHub Automation
 
 ```text
-Use the Technical Documentation Writer and Technical Writing skill. Write for an operator who must complete the task without prior context.
+Use the GitHub Automation Specialist. Inspect the repo through the GitHub plugin, recommend the smallest useful automation, make safe changes, and verify the result.
 ```
 
-## Business Planning
+## Business Automation
 
 ```text
-Use the Business Advisor and Business Planning skill. Separate assumptions from known facts and produce a 30/60/90-day action plan.
+Use the Automation Engineer and Business Advisor. Map the manual workflow, identify triggers and exceptions, choose the simplest automation, and include error handling.
+```
+
+## Career Help
+
+```text
+Use the Researcher and Resume Career Coach. Align my resume or application to the target role without inventing experience.
+```
+
+## Finance Planning
+
+```text
+Use the Finance Planning Advisor. Separate assumptions from facts, compare scenarios, and avoid giving licensed financial advice.
 ```
