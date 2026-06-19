@@ -1,35 +1,33 @@
-# Windows Setup
+# Windows Setup For Personal Codex Use
 
 ## Prerequisites
 
 - Git for Windows.
 - PowerShell 5.1 or newer.
-- Node.js 18 or newer if using Context7, Playwright, or Node-based MCP servers.
-- Python 3.11 or newer if using Python-based tools.
+- Node.js 18 or newer for most modern app projects and optional Context7 tooling.
+- Python 3.11 or newer only when a project needs Python.
 
-## Initialize Repository
+## Use In A Project
+
+Copy or reference `AGENTS.md` from this repository in a personal project where you want Codex to follow Riko AI OS.
 
 ```powershell
-cd Riko-AI-OS
-git init
-git add .
-git commit -m "Initial Riko AI OS setup"
+Copy-Item .\AGENTS.md C:\path\to\personal-project\AGENTS.md
 ```
 
-## Optional Tool Installs
-
-Only install what you need:
+## Optional Tool Checks
 
 ```powershell
+git --version
 node --version
 npm --version
-git --version
+python --version
 ```
 
-For Context7, follow current official setup:
+## GitHub Use
 
-```powershell
-npx ctx7 setup
-```
+For this repository, prefer the GitHub plugin instead of local Git operations when creating, updating, or deleting files.
 
-Do not paste API keys into repository files.
+## Safety
+
+Do not paste API keys, tokens, work credentials, customer data, or medical records into repository files.
