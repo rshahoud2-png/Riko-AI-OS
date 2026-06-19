@@ -6,14 +6,20 @@
 Review this change for correctness, security, regressions, operational risk, and missing tests. Put findings first, ordered by severity, with file references.
 ```
 
-## Architecture Review
+## AI App Review
 
 ```text
-Review this architecture for maintainability, security, scalability, cost, failure modes, and migration risk. Compare at least two alternatives when meaningful.
+Review this AI feature for privacy risk, hallucination risk, prompt/data flow issues, evaluation gaps, cost, latency, and failure states.
 ```
 
-## Documentation Review
+## Automation Review
 
 ```text
-Review this document for accuracy, completeness, operator usability, sensitive information exposure, and stale assumptions.
+Review this automation for duplicate handling, retry behavior, logging, secrets exposure, permissions, and manual override paths.
+```
+
+## Personal Data Review
+
+```text
+Review this repo or document for secrets, work credentials, customer private data, medical records, fake API keys, and unnecessary personal data.
 ```
