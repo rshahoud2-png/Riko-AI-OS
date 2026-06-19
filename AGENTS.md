@@ -64,7 +64,18 @@ Use placeholders like `YOUR_ENV_VAR_NAME` only when documenting variable names, 
 
 ## Agent Routing
 
-Use `agents/orchestrator.md` when the request has multiple stages, unclear scope, or several possible specialists.
+Use `agents/orchestrator.md` first when a request touches 3 or more areas, has multiple stages, has unclear scope, or may need several specialists.
+
+Examples that must start with Orchestrator:
+
+- AI app + database + deployment.
+- Next.js + Supabase + Vercel.
+- GitHub automation + CI/CD + documentation.
+- Business automation + API integration + app UI.
+- Research + finance planning + spreadsheet/document output.
+- Resume strategy + job research + tailored application materials.
+
+After Orchestrator routes the work, keep the smallest useful specialist set. Do not involve every relevant agent just because the project has many domains. Pick only the specialists needed for the current stage.
 
 Use these agents as needed:
 
