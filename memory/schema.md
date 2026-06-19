@@ -1,16 +1,16 @@
 # Memory Schema
 
-Use this schema when implementing memory in Mem0, OpenMemory, a database table, or a local knowledge store.
+Use this schema only if a memory tool or database is added later. This repository does not require memory tooling by default.
 
 ```yaml
 id: string
-category: identity | preference | rule | project | configuration | technical | business | relationship | decision
+category: identity | preference | rule | project | configuration | technical | business | career | finance | event | productivity | decision
 fact: string
 importance: number
 created_at: date
 updated_at: date
 source: string
-scope: user | project | organization | session
+scope: personal | project | session
 expires_at: date | null
 tags:
   - string
@@ -19,6 +19,7 @@ tags:
 ## Retrieval Pattern
 
 1. Search project-scoped memories first.
-2. Search user-scoped memories second.
+2. Search personal preferences second.
 3. Use only relevant memories.
-4. Tell the user when memory materially affects a recommendation.
+4. Never retrieve or store secrets, medical records, work credentials, or customer private data.
+5. Tell the user when memory materially affects a recommendation.
