@@ -1,84 +1,65 @@
 # Riko AI OS
 
-Riko AI OS is a reusable operating system for AI-assisted work in Codex and Claude Code. It gives each assistant a shared way to choose roles, run workflows, use skills, configure MCP tools, and preserve useful memory without copying outside repositories or storing secrets.
+Riko AI OS is my personal Codex operating system. It gives Codex a clean set of agents, skills, workflows, prompts, and memory rules for personal projects across software, AI apps, business automation, research, deployment, career work, event planning, finance planning, and productivity.
 
-## What Is Included
+This repository is personal only. It is not optimized for Claude, TWG work, client delivery, or customer data workflows.
 
-- `AGENTS.md` for Codex operating rules.
-- `CLAUDE.md` for Claude Code operating rules.
-- `agents/` specialist role contracts.
-- `skills/` reusable task methods.
-- `prompts/` delegation and planning prompt templates.
-- `workflows/` repeatable research, coding, documentation, and incident flows.
-- `mcp/` recommended MCP profiles for Claude Code, Codex, and general assistants.
-- `memory/` durable memory policy and schema.
-- `docs/` setup and extension guides.
+## What This Helps With
 
-## Core Principles
+- Full-stack app development.
+- AI app building.
+- GitHub automation and repository maintenance.
+- Vercel deployment and troubleshooting.
+- Supabase setup and database design.
+- API integrations.
+- Business automation.
+- Research and decision support.
+- Resume and job applications.
+- Lifestyle entertainment projects.
+- Event planning and event business ideas.
+- Financial planning support.
+- Personal productivity systems.
 
-1. Use the smallest capable agent for the task.
-2. Ask for missing inputs only when a reasonable assumption would be risky.
-3. Prefer current primary documentation for APIs, frameworks, cloud platforms, and vendor systems.
-4. Keep secrets out of prompts, files, logs, screenshots, and memory.
-5. Separate facts, assumptions, decisions, and recommendations.
-6. Validate work before calling it done.
-7. Store only durable, useful memory.
+## Structure
 
-## Quick Start On Windows
-
-```powershell
-cd Riko-AI-OS
-git init
-git add .
-git commit -m "Initial Riko AI OS setup"
+```text
+Riko-AI-OS/
+├── README.md
+├── AGENTS.md
+├── .gitignore
+├── agents/
+├── skills/
+├── workflows/
+├── prompts/
+├── memory/
+├── docs/
+└── optional/
+    └── claude/
 ```
 
-For Claude Code, copy or reference `CLAUDE.md` from projects where you want this operating system active. For Codex, copy or reference `AGENTS.md`.
+## How Codex Should Use This Repo
 
-Optional global install locations:
+1. Load `AGENTS.md` as the main control file.
+2. Use `agents/orchestrator.md` for multi-step requests.
+3. Pick focused agents from `agents/` only when they clearly help.
+4. Use `skills/` as reusable methods for coding, research, automation, deployment, and planning.
+5. Use `workflows/` for repeatable project flow.
+6. Use `memory/` only for safe, durable personal/project facts.
 
-```powershell
-New-Item -ItemType Directory -Force "$HOME\.claude"
-Copy-Item .\CLAUDE.md "$HOME\.claude\CLAUDE.md"
+## Safety Rules
 
-New-Item -ItemType Directory -Force "$HOME\.codex"
-Copy-Item .\AGENTS.md "$HOME\.codex\AGENTS.md"
-```
+Do not store or commit:
 
-Project-local setup is safer when a project has its own rules:
+- TWG client data.
+- Work credentials.
+- Secrets, tokens, passwords, private keys, or API keys.
+- Medical records.
+- Customer private data.
+- Fake API keys or fake credentials.
+- Copyrighted source content from external repositories.
 
-```powershell
-Copy-Item .\CLAUDE.md C:\path\to\project\CLAUDE.md
-Copy-Item .\AGENTS.md C:\path\to\project\AGENTS.md
-```
+Patterns in this repo are adapted and simplified from public agent/skill conventions. No external repo content should be copied directly.
 
-## Using With Claude Code
+## Optional Claude Support
 
-1. Put `CLAUDE.md` at the root of your project.
-2. Ask Claude to use an agent by name, for example: `Use the Software Architect and Code Reviewer agents to plan this change.`
-3. Add relevant skill files to the prompt when needed, or tell Claude: `Use the Root Cause Analysis skill.`
-4. Configure MCP tools from `mcp/claude-code.md`.
-5. Keep project-specific rules below the Riko rules if they are stricter.
-
-## Using With Codex
-
-1. Put `AGENTS.md` at the root of your project.
-2. Ask Codex to delegate explicitly, for example: `Use the Researcher agent first, then the Full Stack Developer, then Code Reviewer.`
-3. Keep implementation inside the workspace unless the user approves broader access.
-4. Use `mcp/codex.md` as the recommended connector profile.
-5. Add project-specific build, test, and deployment commands to the project `AGENTS.md`.
-
-## Inspired By
-
-This repository was synthesized after studying:
-
-- `hesreallyhim/awesome-claude-code`
-- `VoltAgent/awesome-codex-subagents`
-- `Ischca/awesome-agents-md`
-- `punkpeye/awesome-mcp-servers`
-- `mem0ai/mem0`
-- `upstash/context7`
-- `ComposioHQ/awesome-codex-skills`
-- `milisp/awesome-chatgpt-claude-agents`
-
-The files here are original summaries and operating patterns, not copied source files.
+Claude support is not part of the main operating system. Optional notes live in `optional/claude/optional-claude-setup.md` only.
